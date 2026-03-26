@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FONTELECTROURGENTE | Fontanero urgente en Barcelona</title>
+  <meta name="description" content="FONTELECTROURGENTE ofrece servicio urgente de fontanería y electricidad en Barcelona y alrededores. Atención rápida, profesional y resolutiva." />
+  <style>
+    :root {
+      --bg: #f7fafc;
+      --surface: #ffffff;
+      --surface-2: #0f172a;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #e2e8f0;
+      --primary: #0284c7;
+      --primary-dark: #0369a1;
+      --accent: #22c55e;
+      --shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --max: 1200px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--surface);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      min-width: 0;
+    }
+
+    .brand-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--surface-2), #1e293b);
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+
+    .brand-text h1 {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-text p {
+      margin: 0.2rem 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .nav a:hover { color: var(--primary); }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      border: 0;
+      border-radius: 16px;
+      padding: 0.95rem 1.35rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(2, 132, 199, 0.22);
+    }
+
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-1px); }
+
+    .btn-dark {
+      background: var(--surface-2);
+      color: #fff;
+    }
+
+    .btn-dark:hover { transform: translateY(-1px); background: #1e293b; }
+
+    .btn-light {
+      background: #fff;
+      color: var(--text);
+      border: 1px solid var(--line);
+    }
+
+    .btn-light:hover { border-color: #94a3b8; transform: translateY(-1px); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(2,132,199,0.10), transparent 30%),
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 60%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 4.5rem 0 4rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #075985;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .hero h2 {
+      margin: 1rem 0 0;
+      font-size: clamp(2.3rem, 4vw, 4.6rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+    }
+
+    .hero p.lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin: 1.4rem 0 0;
+      max-width: 62ch;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.85);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.55rem;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-card-wrap {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .hero-card,
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card {
+      padding: 1.6rem;
+    }
+
+    .hero-card.dark {
+      background: var(--surface-2);
+      border-color: #1e293b;
+      color: #fff;
+    }
+
+    .hero-card h3,
+    .section-head h3,
+    .card h3 {
+      margin: 0;
+      font-size: 1.4rem;
+      line-height: 1.15;
+    }
+
+    .hero-card p,
+    .card p,
+    .section-head p {
+      color: var(--muted);
+      margin: 0.75rem 0 0;
+    }
+
+    .hero-card.dark p { color: #cbd5e1; }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .pill {
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    section { padding: 5rem 0; }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 2rem;
+    }
+
+    .section-head .label {
+      color: var(--primary);
+      font-size: 0.82rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 0.8rem;
+      display: inline-block;
+    }
+
+    .section-head h3 {
+      font-size: clamp(1.9rem, 2.6vw, 3rem);
+      letter-spacing: -0.03em;
+    }
+
+    .services-grid,
+    .reviews-grid,
+    .works-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+    .works-grid { grid-template-columns: repeat(3, 1fr); }
+    .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .card {
+      padding: 1.6rem;
+      height: 100%;
+    }
+
+    .card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: #e0f2fe;
+      color: #075985;
+      font-size: 1.35rem;
+      margin-bottom: 1rem;
+    }
+
+    .check-list {
+      list-style: none;
+      margin: 1rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 0.8rem;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .check-list li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .section-dark {
+      background: var(--surface-2);
+      color: #fff;
+    }
+
+    .section-dark .section-head p,
+    .section-dark .card p,
+    .section-dark .review p,
+    .section-dark .zone-copy p {
+      color: #cbd5e1;
+    }
+
+    .section-dark .card,
+    .section-dark .review {
+      background: #111c31;
+      border-color: #24324b;
+      box-shadow: none;
+    }
+
+    .section-dark .card-icon {
+      background: rgba(2,132,199,0.18);
+      color: #7dd3fc;
+    }
+
+    .works-grid .card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .zone-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .zones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .zone {
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%);
+      color: #fff;
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box p { color: #dbeafe; }
+
+    .review {
+      padding: 1.5rem;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .stars {
+      color: #f59e0b;
+      letter-spacing: 0.12em;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .review .name {
+      margin-top: 1rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .contact-info,
+    .contact-panel {
+      padding: 1.8rem;
+    }
+
+    .contact-info .row {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .contact-info .row:last-child { border-bottom: 0; }
+
+    .contact-label {
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .contact-value {
+      margin-top: 0.35rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    .contact-panel {
+      background: var(--surface-2);
+      color: #fff;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-panel p { color: #cbd5e1; }
+
+    .mini-note {
+      margin-top: 1.2rem;
+      padding: 1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.95rem;
+      color: #dbeafe;
+    }
+
+    footer {
+      padding: 2rem 0 2.5rem;
+      border-top: 1px solid var(--line);
+      color: #64748b;
+      background: #fff;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-weight: 600;
+    }
+
+    .mobile-call {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 1000;
+      display: none;
+      width: 60px;
+      height: 60px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 20px 40px rgba(34, 197, 94, 0.35);
+      place-items: center;
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+
+    .hero-photo,
+    .works-photo {
+      width: 100%;
+      border-radius: 24px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+    }
+
+    .hero-photo {
+      min-height: 280px;
+      max-height: 360px;
+    }
+
+    .works-photo {
+      grid-column: span 3;
+      min-height: 260px;
+      max-height: 360px;
+      margin-bottom: 1rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .field.full { grid-column: 1 / -1; }
+
+    .field label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #dbeafe;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 16px;
+      padding: 0.95rem 1rem;
+      font: inherit;
+      outline: none;
+    }
+
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: #64748b;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: #7dd3fc;
+      box-shadow: 0 0 0 4px rgba(125, 211, 252, 0.18);
+    }
+
+    .field textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .field small {
+      color: #dbeafe;
+      font-size: 0.82rem;
+    }
+
+    .field select option {
+      color: #0f172a;
+      background: #ffffff;
+    }
+
+    .map-wrap {
+      margin-top: 1.5rem;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: #fff;
+    }
+
+    .map-wrap iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      display: block;
+    }
+
+    .map-note {
+      padding: 1rem 1.2rem;
+      color: #334155;
+      font-size: 0.95rem;
+      background: #fff;
+      border-top: 1px solid var(--line);
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 92px;
+      z-index: 1001;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: #25D366;
+      color: #fff;
+      padding: 0.9rem 1rem;
+      border-radius: 999px;
+      box-shadow: 0 18px 35px rgba(37, 211, 102, 0.35);
+      font-weight: 800;
+      line-height: 1;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      animation: whatsappPulse 2s infinite;
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 40px rgba(37, 211, 102, 0.42);
+    }
+
+    .floating-whatsapp svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    @keyframes whatsappPulse {
+      0% { box-shadow: 0 18px 35px rgba(37, 211, 102, 0.35); }
+      50% { box-shadow: 0 18px 35px rgba(37, 211, 102, 0.55); }
+      100% { box-shadow: 0 18px 35px rgba(37, 211, 102, 0.35); }
+    }
+
+    @media (max-width: 1080px) {
+      .nav { display: none; }
+      .hero-grid,
+      .zone-layout,
+      .contact-layout,
+      .services-grid,
+      .works-grid,
+      .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hero-grid,
+      .zone-layout,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .header-actions {
+        width: 100%;
+        justify-content: center;
+      }
+      .hero-grid { padding: 3rem 0; }
+      .hero-stats,
+      .services-grid,
+      .works-grid,
+      .reviews-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .works-photo { grid-column: auto; }
+      .brand-text h1 { font-size: 0.98rem; }
+      .brand-text p { font-size: 0.82rem; }
+      .btn { width: 100%; }
+      .hero-actions { flex-direction: column; }
+      .mobile-call { display: grid; }
+      .floating-whatsapp {
+        right: 14px;
+        bottom: 84px;
+        padding: 0.9rem;
+      }
+      .floating-whatsapp span {
+        display: none;
+      }
+      section { padding: 4rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#inicio" class="brand" aria-label="Ir al inicio">
+        <div class="brand-badge">FE</div>
+        <div class="brand-text">
+          <h1>FONTELECTROURGENTE</h1>
+          <p>Fontanero y electricista urgente en Barcelona</p>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#zonas">Zonas</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-dark" href="tel:674060926">Llamar: 674 060 926</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Urgencias 24 horas · Barcelona y alrededores</span>
+          <h2>Reparaciones urgentes de fontanería y electricidad con atención profesional.</h2>
+          <p class="lead">
+            FONTELECTROURGENTE ofrece un servicio serio, rápido y resolutivo para viviendas, oficinas y locales. Rolando trabaja con experiencia, material de calidad y enfoque práctico para solucionar averías de forma eficaz y duradera.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/34674060926?text=Hola%2C%20necesito%20un%20servicio%20urgente%20de%20fontaner%C3%ADa%20o%20electricidad%20en%20Barcelona.">WhatsApp inmediato</a>
+            <a class="btn btn-light" href="tel:674060926">Llamar ahora</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>24h</strong>
+              <span>Atención urgente</span>
+            </div>
+            <div class="stat">
+              <strong>+100%</strong>
+              <span>Enfoque profesional</span>
+            </div>
+            <div class="stat">
+              <strong>BCN</strong>
+              <span>Cobertura local</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card-wrap">
+          <img class="hero-photo" src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=1200&q=80" alt="Fontanero profesional trabajando en un baño" loading="eager" />
+          <div class="hero-card">
+            <h3>El valor diferencial</h3>
+            <p>
+              Experiencia, herramientas adecuadas y material a mano para actuar con rapidez, reducir tiempos de espera y ejecutar reparaciones más fiables.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Fugas de agua</span>
+              <span class="pill">Desatascos</span>
+              <span class="pill">Termos eléctricos</span>
+              <span class="pill">Cortocircuitos</span>
+              <span class="pill">Cuadros eléctricos</span>
+              <span class="pill">Atención inmediata</span>
+            </div>
+          </div>
+
+          <div class="hero-card dark">
+            <h3>Compromiso de servicio</h3>
+            <p>
+              “Aunque llueva, truene o haga bueno, nosotros acudiremos en tu auxilio”. Una propuesta clara: responder con rapidez y resolver con seriedad.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Servicios</span>
+          <h3>Asistencia urgente para averías de fontanería y electricidad</h3>
+          <p>
+            Cobertura orientada a resolver incidencias reales con intervención rápida, comunicación clara y ejecución limpia. Servicio pensado para urgencias domésticas y profesionales.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="card">
+            <div class="card-icon">💧</div>
+            <h3>Fontanería urgente</h3>
+            <p>Resolución rápida de fugas, atascos, tuberías dañadas, grifería, sifones, problemas de presión y averías en baño o cocina.</p>
+            <ul class="check-list">
+              <li>Reparación de fugas de agua</li>
+              <li>Desatascos de WC, lavabo, bañera y ducha</li>
+              <li>Cambio de grifería y sifones</li>
+              <li>Instalación de lavadora, lavavajillas y termo</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Electricidad urgente</h3>
+            <p>Intervenciones en apagones, cortocircuitos, enchufes, interruptores, cuadros eléctricos y averías eléctricas generales.</p>
+            <ul class="check-list">
+              <li>Reparación de apagones</li>
+              <li>Cambio de enchufes e interruptores</li>
+              <li>Sustitución de cuadro eléctrico</li>
+              <li>Instalación de luces y electrodomésticos</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🛠️</div>
+            <h3>Servicio serio y resolutivo</h3>
+            <p>Atención profesional en Barcelona y alrededores, con materiales fiables, trabajo metódico y foco en una solución definitiva.</p>
+            <ul class="check-list">
+              <li>Atención rápida y directa</li>
+              <li>Trabajo limpio y ordenado</li>
+              <li>Diagnóstico claro</li>
+              <li>Trato profesional y cercano</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark" id="trabajos">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Trabajos habituales</span>
+          <h3>Intervenciones frecuentes realizadas con eficacia</h3>
+          <p>
+            Soluciones centradas en averías urgentes y reparaciones de alta demanda, tanto en fontanería como en electricidad.
+          </p>
+        </div>
+
+        <div class="works-grid">
+          <img class="works-photo" src="https://images.unsplash.com/photo-1620626011761-996317b8d101?auto=format&fit=crop&w=1400&q=80" alt="Baño moderno y bien terminado" loading="lazy" />
+          <article class="card">
+            <div class="card-icon">🚿</div>
+            <strong>Fugas, pinchazos y pérdidas de agua</strong>
+            <p>Localización del problema y reparación con criterio técnico para frenar daños y restablecer el servicio cuanto antes.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🚽</div>
+            <strong>Desatascos en baño y cocina</strong>
+            <p>Desatasco de WC, pica, lavamanos, bañeras y duchas, con intervención rápida para recuperar la normalidad.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔥</div>
+            <strong>Termos eléctricos e instalaciones</strong>
+            <p>Sustitución e instalación de termo eléctrico, lavadoras y lavavajillas con acabado limpio y funcional.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">💡</div>
+            <strong>Luces, enchufes e interruptores</strong>
+            <p>Reparación o sustitución de mecanismos eléctricos y elementos de iluminación en viviendas y locales.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔌</div>
+            <strong>Cortocircuitos y apagones</strong>
+            <p>Diagnóstico y reparación de incidencias eléctricas urgentes para recuperar seguridad y suministro.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🧰</div>
+            <strong>Cuadro eléctrico y averías generales</strong>
+            <p>Intervenciones orientadas a restablecer el funcionamiento y minimizar riesgos en instalaciones eléctricas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="zonas">
+      <div class="container zone-layout">
+        <div class="zone-copy">
+          <div class="section-head" style="margin-bottom: 1rem;">
+            <span class="label">Cobertura</span>
+            <h3>Servicio urgente en Barcelona y poblaciones cercanas</h3>
+            <p>
+              Presencia en distintos barrios de Barcelona y municipios del entorno para atender incidencias con mayor rapidez.
+            </p>
+          </div>
+
+          <div class="cta-box">
+            <h3 style="margin:0; font-size:1.7rem;">¿Tienes una urgencia ahora?</h3>
+            <p style="margin-top:0.8rem;">Contacta directamente con Rolando para una atención inmediata por teléfono o WhatsApp.</p>
+            <div class="hero-actions" style="margin-top:1.25rem;">
+              <a class="btn btn-light" href="tel:674060926">674 060 926</a>
+              <a class="btn btn-primary" href="https://wa.me/34674060926?text=Hola%2C%20necesito%20un%20servicio%20urgente%20de%20fontaner%C3%ADa%20o%20electricidad%20en%20Barcelona.">Abrir WhatsApp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="zones">
+          <span class="zone">Sants</span>
+          <span class="zone">Les Corts</span>
+          <span class="zone">Eixample</span>
+          <span class="zone">El Putxet</span>
+          <span class="zone">Poble-sec</span>
+          <span class="zone">Nou Barris</span>
+          <span class="zone">Sagrada Família</span>
+          <span class="zone">Gràcia</span>
+          <span class="zone">Barceloneta</span>
+          <span class="zone">Poblenou</span>
+          <span class="zone">Sarrià</span>
+          <span class="zone">Pedralbes</span>
+          <span class="zone">Bonanova</span>
+          <span class="zone">El Carmel</span>
+          <span class="zone">El Raval</span>
+          <span class="zone">Gòtic</span>
+          <span class="zone">L'Hospitalet de Llobregat</span>
+          <span class="zone">Sant Boi de Llobregat</span>
+          <span class="zone">Cornellà de Llobregat</span>
+          <span class="zone">Sant Cugat</span>
+          <span class="zone">El Prat de Llobregat</span>
+          <span class="zone">Esplugues de Llobregat</span>
+          <span class="zone">Badalona</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark" id="opiniones">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Opiniones</span>
+          <h3>Reseñas que refuerzan la confianza del servicio</h3>
+          <p>
+            Selección de testimonios reales de clientes que destacan rapidez, profesionalidad, calidad del trabajo y buena atención.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>Excelente servicio y rapidez. En una emergencia con el calentador eléctrico resolvió todo el mismo día y en tiempo récord.</p>
+            <div class="name">Rocío</div>
+          </article>
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>Vino un domingo en periodo festivo, solucionó la avería con material de calidad y corrigió un mal trabajo anterior. Muy recomendable.</p>
+            <div class="name">Kro H</div>
+          </article>
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>Muy profesional, puntual y detallista. Instaló todo perfectamente y dejó el espacio limpio y ordenado.</p>
+            <div class="name">Rosa Gálvez</div>
+          </article>
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>Ya son dos veces que soluciona problemas de fontanería en mi casa con resultados impecables. Puntual, serio y eficaz.</p>
+            <div class="name">Carlos Rosero</div>
+          </article>
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>Excelente fontanero, atento y profesional. Trabajo bien hecho, con calidad y garantía. Un diez de diez.</p>
+            <div class="name">Zael Rodríguez López</div>
+          </article>
+          <article class="review">
+            <div class="stars">★★★★★</div>
+            <p>Me solucionó un problema en el baño de urgencia, muy profesional, con calidad y precio adecuado. Total confianza.</p>
+            <div class="name">Gloria Ustrell León</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="container contact-layout">
+        <div class="card contact-info">
+          <div class="section-head" style="margin-bottom: 0.5rem;">
+            <span class="label">Contacto</span>
+            <h3>Atención directa para urgencias</h3>
+            <p>Canales de contacto rápidos para resolver incidencias sin pasos innecesarios.</p>
+          </div>
+
+          <div class="row">
+            <div class="contact-label">Teléfono</div>
+            <div class="contact-value"><a href="tel:674060926">674 060 926</a></div>
+          </div>
+          <div class="row">
+            <div class="contact-label">Email</div>
+            <div class="contact-value"><a href="mailto:info@fontelectrourgente.com">info@fontelectrourgente.com</a></div>
+          </div>
+          <div class="row">
+            <div class="contact-label">Dirección</div>
+            <div class="contact-value">C. d'Almeria, 38, LOCAL, Sants-Montjuïc, 08014 Barcelona</div>
+          </div>
+
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps?q=C.%20d'Almeria%2C%2038%2C%20LOCAL%2C%20Sants-Montju%C3%AFc%2C%2008014%20Barcelona&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de FONTELECTROURGENTE en Barcelona">
+            </iframe>
+            <div class="map-note">Ubicación: C. d'Almeria, 38, LOCAL, Sants-Montjuïc, 08014 Barcelona</div>
+          </div>
+        </div>
+
+        <div class="contact-panel">
+          <h3 style="margin:0; font-size:1.8rem;">Solicita asistencia inmediata</h3>
+          <p style="margin-top:0.85rem;">Rellena el formulario y el mensaje se preparará automáticamente para WhatsApp con los datos esenciales de la avería.</p>
+
+          <form id="form-averia" class="form-grid">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+            </div>
+            <div class="field">
+              <label for="apellido">Apellido</label>
+              <input id="apellido" name="apellido" type="text" placeholder="Tu apellido" required />
+            </div>
+            <div class="field">
+              <label for="zona">Zona</label>
+              <input id="zona" name="zona" type="text" placeholder="Ej. Sants, Eixample, Badalona" required />
+            </div>
+            <div class="field">
+              <label for="telefono">Teléfono</label>
+              <input id="telefono" name="telefono" type="tel" placeholder="Tu teléfono" required />
+            </div>
+            <div class="field full">
+              <label for="email">Correo electrónico <small>(opcional)</small></label>
+              <input id="email" name="email" type="email" placeholder="tuemail@ejemplo.com" />
+            </div>
+            <div class="field full">
+              <label for="tipo">Tipo de avería</label>
+              <select id="tipo" name="tipo" required>
+                <option value="">Selecciona una opción</option>
+                <option>Fuga de agua</option>
+                <option>Desatasco</option>
+                <option>Termo eléctrico</option>
+                <option>Grifería o sifón</option>
+                <option>Cortocircuito o apagón</option>
+                <option>Cuadro eléctrico</option>
+                <option>Otra avería</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="averia">Explicar avería</label>
+              <textarea id="averia" name="averia" placeholder="Describe brevemente lo que ocurre, desde cuándo pasa y cualquier detalle importante." required></textarea>
+            </div>
+            <div class="field full">
+              <button class="btn btn-primary" type="submit">Enviar por WhatsApp</button>
+            </div>
+          </form>
+
+          <div class="hero-actions" style="margin-top:1.4rem;">
+            <a class="btn btn-light" href="tel:674060926">Llamar ahora</a>
+            <a class="btn btn-primary" href="https://wa.me/34674060926?text=Hola%2C%20necesito%20un%20servicio%20urgente%20de%20fontaner%C3%ADa%20o%20electricidad%20en%20Barcelona.">WhatsApp directo</a>
+          </div>
+          <div class="mini-note">
+            Responsable del tratamiento: FONTELECTROURGENTE. Finalidad: gestionar solicitudes de información. Derechos: acceso, rectificación, oposición, limitación y retirada del consentimiento mediante email.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© 2026 FONTELECTROURGENTE · Fontanería y electricidad urgente en Barcelona</div>
+      <div class="footer-links">
+        <a href="#">Aviso Legal</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="mobile-call" href="tel:674060926" aria-label="Llamar ahora">☎</a>
+  <a class="floating-whatsapp" href="https://wa.me/34674060926?text=Hola%2C%20necesito%20un%20servicio%20urgente%20de%20fontaner%C3%ADa%20o%20electricidad%20en%20Barcelona." aria-label="Abrir WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.23c-.29-.15-1.69-.83-1.95-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.91 1.12-.17.19-.33.22-.62.07-.29-.15-1.22-.45-2.32-1.42-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.45.13-.6.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.15-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.29-1 1-.96 2.44.03 1.44 1.03 2.83 1.17 3.03.14.19 2.02 3.09 4.89 4.33.68.29 1.21.46 1.63.58.69.22 1.31.19 1.81.12.55-.08 1.69-.69 1.93-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.34zM16.03 27.2h-.01a11.07 11.07 0 0 1-5.64-1.54l-.4-.24-4.19 1.1 1.12-4.08-.26-.42a11.13 11.13 0 1 1 9.38 5.18zm0-20.28a9.15 9.15 0 0 0-7.82 13.88l.31.49-.66 2.42 2.49-.65.47.28a9.16 9.16 0 1 0 5.21-16.42z"/>
+    </svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <script>
+    document.getElementById('form-averia').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const apellido = document.getElementById('apellido').value.trim();
+      const zona = document.getElementById('zona').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const tipo = document.getElementById('tipo').value.trim();
+      const averia = document.getElementById('averia').value.trim();
+
+      const mensaje = `Hola, necesito asistencia urgente.%0A%0A` +
+        `Nombre: ${encodeURIComponent(nombre)}%20${encodeURIComponent(apellido)}%0A` +
+        `Zona: ${encodeURIComponent(zona)}%0A` +
+        `Teléfono: ${encodeURIComponent(telefono)}%0A` +
+        `Correo: ${email ? encodeURIComponent(email) : 'No indicado'}%0A` +
+        `Tipo de avería: ${encodeURIComponent(tipo)}%0A` +
+        `Explicación: ${encodeURIComponent(averia)}`;
+
+      window.open(`https://wa.me/34674060926?text=${mensaje}`, '_blank');
+    });
+  </script>
+</body>
+</html>
