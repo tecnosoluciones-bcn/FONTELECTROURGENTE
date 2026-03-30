@@ -4,7 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FONTELECTROURGENTE | Fontanero urgente en Barcelona</title>
-  <meta name="description" content="FONTELECTROURGENTE ofrece servicio urgente de fontanería y electricidad en Barcelona y alrededores. Atención rápida, profesional y resolutiva." />
+  <meta name="description" content="FONTELECTROURGENTE ofrece servicio urgente de fontanería y electricidad en Barcelona y alrededores. Atención rápida, profesional y resolutiva 24 horas." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="format-detection" content="telephone=yes" />
+  <meta property="og:title" content="FONTELECTROURGENTE | Fontanero urgente en Barcelona" />
+  <meta property="og:description" content="Urgencias 24 horas de fontanería y electricidad en Barcelona y alrededores." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./FontElectro.png" />
+  <link rel="preload" as="image" href="./FontElectro.png" />
+  <link rel="preload" as="image" href="fonte.png" />
   <style>
     :root {
       --bg: #f7fafc;
@@ -219,6 +228,7 @@
     .hero-card-wrap {
       display: grid;
       gap: 1rem;
+      align-content: start;
     }
 
     .hero-card,
@@ -533,7 +543,10 @@
 
     .hero-photo {
       min-height: 280px;
-      max-height: 360px;
+      max-height: 420px;
+      background: #fff;
+      padding: 0.5rem;
+      object-fit: contain;
     }
 
     .works-photo {
@@ -541,6 +554,31 @@
       min-height: 260px;
       max-height: 360px;
       margin-bottom: 1rem;
+    }
+
+    .benefits-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .benefit {
+      padding: 1rem 1.1rem;
+      border-radius: 18px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .benefit span {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 0.92rem;
+      color: #64748b;
+      font-weight: 600;
     }
 
     .form-grid {
@@ -618,6 +656,27 @@
       height: 320px;
       border: 0;
       display: block;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .quick-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .quick-card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
     }
 
     .map-note {
@@ -713,6 +772,10 @@
       .floating-whatsapp span {
         display: none;
       }
+      .benefits-bar,
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
       section { padding: 4rem 0; }
     }
   </style>
@@ -721,7 +784,7 @@
   <header class="topbar">
     <div class="container topbar-inner">
       <a href="#inicio" class="brand" aria-label="Ir al inicio">
-        <div class="brand-badge">FE</div>
+        <img src="fonte.png" alt="Logo FONTELECTROURGENTE" width="52" height="52" style="width:52px; height:52px; object-fit:contain; border-radius:12px; background:#fff; padding:4px;" loading="eager" decoding="async" />
         <div class="brand-text">
           <h1>FONTELECTROURGENTE</h1>
           <p>Fontanero y electricista urgente en Barcelona</p>
@@ -748,6 +811,7 @@
       <div class="container hero-grid">
         <div>
           <span class="eyebrow">Urgencias 24 horas · Barcelona y alrededores</span>
+          <img src="./FontElectro.png" alt="Imagen principal FONTELECTROURGENTE" width="420" height="420" style="width:100%; max-width:420px; margin-bottom:1.5rem; border-radius:18px; box-shadow:var(--shadow);" loading="eager" decoding="async" />
           <h2>Reparaciones urgentes de fontanería y electricidad con atención profesional.</h2>
           <p class="lead">
             FONTELECTROURGENTE ofrece un servicio serio, rápido y resolutivo para viviendas, oficinas y locales. Rolando trabaja con experiencia, material de calidad y enfoque práctico para solucionar averías de forma eficaz y duradera.
@@ -771,6 +835,13 @@
               <strong>BCN</strong>
               <span>Cobertura local</span>
             </div>
+          </div>
+
+          <div class="benefits-bar" aria-label="Ventajas del servicio">
+            <div class="benefit">Respuesta rápida<span>Contacto directo y atención clara</span></div>
+            <div class="benefit">Reparación seria<span>Trabajo limpio y bien ejecutado</span></div>
+            <div class="benefit">Cobertura Barcelona<span>Barrios y poblaciones cercanas</span></div>
+            <div class="benefit">WhatsApp inmediato<span>Envía la avería en segundos</span></div>
           </div>
         </div>
 
@@ -991,6 +1062,30 @@
       </div>
     </section>
 
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Proceso rápido</span>
+          <h3>Cómo funciona el servicio</h3>
+          <p>La web queda optimizada para que el cliente entienda rápido qué hacer y contacte sin fricción.</p>
+        </div>
+        <div class="quick-grid">
+          <div class="quick-card">
+            <strong>1. Explica la avería</strong>
+            <p>Describe el problema por formulario, llamada o WhatsApp.</p>
+          </div>
+          <div class="quick-card">
+            <strong>2. Se valora la urgencia</strong>
+            <p>Se prioriza la incidencia para dar una respuesta rápida y realista.</p>
+          </div>
+          <div class="quick-card">
+            <strong>3. Se actúa</strong>
+            <p>Intervención profesional con material y enfoque resolutivo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contacto">
       <div class="container contact-layout">
         <div class="card contact-info">
@@ -1101,6 +1196,26 @@
     </svg>
     <span>WhatsApp</span>
   </a>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FONTELECTROURGENTE",
+    "image": "./FontElectro.png",
+    "telephone": "+34674060926",
+    "email": "info@fontelectrourgente.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. d'Almeria, 38, LOCAL",
+      "addressLocality": "Barcelona",
+      "postalCode": "08014",
+      "addressCountry": "ES"
+    },
+    "areaServed": ["Barcelona", "L'Hospitalet de Llobregat", "Badalona", "Sant Cugat", "Cornellà de Llobregat", "El Prat de Llobregat", "Esplugues de Llobregat", "Sant Boi de Llobregat"],
+    "url": "https://fontelectrourgente.com"
+  }
+  </script>
 
   <script>
     document.getElementById('form-averia').addEventListener('submit', function (e) {
